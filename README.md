@@ -5,7 +5,7 @@ Three complete Node.js + Express.js + MongoDB experiments.
 Quick Start (any experiment)
 cd exp-2.2.X-<name>
 npm install
-# edit .env as needed
+edit .env as needed
 npm run dev
 Experiment Overview
 Experiment	Topic	Key Concepts
