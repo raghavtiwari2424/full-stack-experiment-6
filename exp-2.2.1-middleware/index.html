@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Experiment 2.2.1</title>
+</head>
+<body style="font-family: Arial; text-align:center; background:#0f172a; color:white">
+
+<h1>Experiment 2.2.1 — Middleware</h1>
+
+<button onclick="checkHealth()">Check Server</button>
+
+<p id="result"></p>
+
+<script>
+async function checkHealth() {
+  const res = await fetch("https://YOUR-URL-1.onrender.com/api/public/health");
+  const data = await res.json();
+  document.getElementById("result").innerText = JSON.stringify(data);
+}
+</script>
+
+</body>
+</html>
