@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Full Stack Experiments Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background: #1e293b;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 50px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      width: 280px;
+      border-radius: 12px;
+      text-align: center;
+      transition: 0.3s;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      background: #334155;
+    }
+
+    .title {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .desc {
+      font-size: 14px;
+      color: #cbd5f5;
+      margin-bottom: 15px;
+    }
+
+    button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      background: #38bdf8;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0ea5e9;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 10px;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  🚀 Full Stack Experiment Dashboard
+</header>
+
+<div class="container">
+
+  <!-- 2.2.1 -->
+  <div class="card">
+    <div class="title">Experiment 2.2.1</div>
+    <div class="desc">Middleware Implementation</div>
+    <button onclick="openExp('2.2.1')">Open</button>
+  </div>
+
+  <!-- 2.2.2 -->
+  <div class="card">
+    <div class="title">Experiment 2.2.2</div>
+    <div class="desc">JWT Authentication</div>
+    <button onclick="openExp('2.2.2')">Open</button>
+  </div>
+
+  <!-- 2.2.3 -->
+  <div class="card">
+    <div class="title">Experiment 2.2.3</div>
+    <div class="desc">Transaction System</div>
+    <button onclick="openExp('2.2.3')">Open</button>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Raghav Tiwari | Full Stack Experiments
+</footer>
+
+<script>
+  function openExp(exp) {
+
+    // 👉 CHANGE THESE LINKS AFTER DEPLOYMENT
+    const links = {
+      "2.2.1": "https://your-backend-2-2-1.onrender.com",
+      "2.2.2": "https://your-backend-2-2-2.onrender.com",
+      "2.2.3": "https://your-backend-2-2-3.onrender.com"
+    };
+
+    if (links[exp]) {
+      window.open(links[exp], "_blank");
+    } else {
+      alert("Link not added yet!");
+    }
+  }
+</script>
+
+</body>
+</html>
