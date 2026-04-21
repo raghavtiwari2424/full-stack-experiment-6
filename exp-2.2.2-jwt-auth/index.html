@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Experiment 2.2.2</title>
+</head>
+<body style="font-family: Arial; text-align:center; background:#0f172a; color:white">
+
+<h1>Experiment 2.2.2 — JWT Auth</h1>
+
+<input id="email" placeholder="Email"><br><br>
+<input id="password" placeholder="Password"><br><br>
+
+<button onclick="login()">Login</button>
+
+<p id="token"></p>
+
+<script>
+async function login() {
+  const res = await fetch("https://YOUR-URL-2.onrender.com/api/auth/login", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({
+      email: document.getElementById("email").value,
+      password: document.getElementById("password").value
+    })
+  });
+
+  const data = await res.json();
+  document.getElementById("token").innerText = JSON.stringify(data);
+}
+</script>
+
+</body>
+</html>
